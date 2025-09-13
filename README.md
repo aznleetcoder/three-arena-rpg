@@ -9,6 +9,7 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 ## ✨ Features
 
 ### Core Gameplay
+
 - **Real-time Multiplayer Combat** - Battle other players in live PvP action
 - **AI Enemy System** - Fight against intelligent Moblin enemies with synchronized behavior
 - **Skill-based Combat** - Multiple attack types including dash attacks and special abilities
@@ -16,6 +17,7 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 - **Health and Damage System** - Strategic combat with health management
 
 ### Visual & Audio
+
 - **Art Style** - Colorful, whimsical pixel 3D environments
 - **Dynamic Lighting** - Advanced shadow mapping and atmospheric lighting
 - **Particle Effects** - Blood particles, explosions, and impact effects
@@ -23,6 +25,7 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 - **Environmental Audio** - Immersive sound effects and positional audio
 
 ### Technical Features
+
 - **Three.js Rendering** - High-performance 3D graphics
 - **Ably Real-time Networking** - Seamless multiplayer synchronization
 - **Responsive Controls** - Smooth WASD movement and mouse interactions
@@ -32,6 +35,7 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 ## 🎯 Game Mechanics
 
 ### Combat System
+
 - **Melee Attacks** - Close-range combat with timing-based mechanics
 - **Dash Abilities** - Quick movement and attack combinations
 - **Skill Cooldowns** - Strategic ability management
@@ -39,12 +43,14 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 - **Health Orbs** - Collectible healing items
 
 ### Enemy AI
+
 - **Smart Enemy Behavior** - Enemies detect, chase, and attack players
 - **Synchronized Attacks** - Multiplayer-coordinated enemy actions
 - **Fireball Attacks** - Ranged enemy abilities
 - **Horde Management** - Dynamic enemy spawning system
 
 ### World Features
+
 - **Circular Arena** - Bounded combat area with natural barriers
 - **Environmental Objects** - Trees, bushes, and rocks for tactical positioning
 - **Dynamic Skydome** - Atmospheric sky rendering
@@ -61,17 +67,20 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 ## 🛠️ Technical Architecture
 
 ### Frontend Technologies
+
 - **Three.js** - 3D rendering engine
 - **JavaScript ES6+** - Modern web development
 - **WebGL** - Hardware-accelerated graphics
 - **Web Audio API** - Advanced audio processing
 
 ### Networking
+
 - **Ably Pub/Sub** - Real-time message synchronization
 - **Custom Network Protocol** - Optimized player and enemy state sync
 - **Event-driven Architecture** - Responsive multiplayer updates
 
 ### Game Systems
+
 - **Entity Component System** - Modular game object architecture
 - **State Management** - Centralized game state handling
 - **Resource Loading** - Efficient asset management
@@ -80,65 +89,40 @@ Three Arena is a top-down 3D multiplayer combat game where players battle in a f
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Modern web browser with WebGL support
 - Internet connection for multiplayer features
 
 ### Installation
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/leonwangg1/three-arena.git
    cd three-arena
    ```
 
 2. Open `threejs-game.html` in your web browser or serve via a local web server:
+
    ```bash
    # Using Python
    python -m http.server 8000
-   
+
    # Using Node.js
    npx serve .
    ```
 
-3. Navigate to `http://localhost:8000/threejs-game.html`
-
-### Configuration
-- Configure Ably credentials in `src/classes/ably-config.js` for multiplayer functionality
-- Adjust game settings in the main game files as needed
-
-## 📁 Project Structure
-
-```
-three-arena/
-├── threejs-game.html          # Main game entry point
-├── src/
-│   ├── threejs/               # Three.js game engine
-│   │   ├── main-threejs.js    # Game initialization and loop
-│   │   ├── ThreeJSScene.js    # 3D scene management
-│   │   ├── ThreeJSPlayer.js   # Main player controller
-│   │   ├── GameWorld.js       # World environment
-│   │   ├── InputManager.js    # Input handling
-│   │   └── Example/           # Game systems
-│   │       ├── Enemy.js       # AI enemy system
-│   │       ├── XPSystem.js    # Experience system
-│   │       ├── DamageNumber.js # Damage display
-│   │       └── ...           # Other game systems
-│   └── classes/               # Core game classes
-│       ├── NetworkClient.js   # Multiplayer networking
-│       └── AblyEnemySyncManager.js # Enemy synchronization
-└── assets/                    # Game assets
-    ├── sprites/               # Character and effect sprites
-    ├── textures/             # Environmental textures
-    └── audio/                # Sound effects
-```
+3. Navigate to `http://localhost:8000/index.html`
 
 ## 🎨 Game Assets
 
-The game features custom sprite sheets, environmental textures, and audio effects that create an immersive fantasy combat experience. 
+The game features custom sprite sheets, environmental textures, and audio effects that create an immersive fantasy combat experience.
 All assets are optimized for web delivery and cross-browser compatibility.
 
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
+
 - Report bugs and issues
 - Suggest new features
 - Submit pull requests
