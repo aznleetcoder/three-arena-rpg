@@ -1,0 +1,105 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Quest Movement Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<script id="simplify-jobs-page-script" src="moz-extension://49fe6a54-2a37-413f-b002-cbd2859da620/js/pageScript.bundle.js"></script></head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" width="1149" height="976" style="width: 1149px; height: 976px;"></canvas>
+        <div id="ui-overlay">
+            <div id="hit-overlay" style="display: none;" class="">
+                <img src="assets/images/on_hit.png" alt="Hit Effect">
+            </div>
+            <div id="controls" style="display: block;">
+                <p>WASD or Arrow Keys to move</p>
+                <p>SPACEBAR to attack</p>
+                <p>Q for lightning strike</p>
+                <p>E to spawn more enemies</p>
+                <p>H to toggle DOF controls</p>
+                <p>I to toggle instructions</p>
+                <p>Mouse to rotate camera</p>
+            </div>
+            <div id="health-display">
+                <div id="hearts-container"><div class="heart filled" id="heart-0"></div><div class="heart filled" id="heart-1"></div><div class="heart empty" id="heart-2"></div><div class="heart empty" id="heart-3"></div><div class="heart empty" id="heart-4"></div></div>
+            </div>
+            <div id="skill-icons">
+                <div class="skill-icon ready" id="attack-icon">
+                    <div class="key-indicator">SPACE</div>
+                    <div class="skill-background"></div>
+                    <img src="assets/images/icon_attack.png" alt="Attack">
+                    <div class="cooldown-overlay" style="--progress: 360deg;"></div>
+                </div>
+                <div class="skill-icon ready" id="dash-icon">
+                    <div class="key-indicator">SHIFT</div>
+                    <div class="skill-background"></div>
+                    <img src="assets/images/icon_dash.png" alt="Dash">
+                    <div class="cooldown-overlay" style="--progress: 360deg;"></div>
+                </div>
+                <div class="skill-icon ready" id="lightning-icon">
+                    <div class="key-indicator">Q</div>
+                    <div class="skill-background"></div>
+                    <img src="assets/images/icon_lightning.png" alt="Lightning Strike">
+                    <div class="cooldown-overlay" style="--progress: 360deg;"></div>
+                </div>
+            </div>
+            <div id="dof-controls" style="display: none;">
+                <p><strong>Depth of Field</strong></p>
+                <label>
+                    Blur Strength: <span id="blur-strength-value">0.5</span><br>
+                    <input type="range" id="blur-strength" min="0" max="50" step="0.5" value="0.5">
+                </label>
+                <label>
+                    Blur Radius: <span id="blur-radius-value">1.5</span><br>
+                    <input type="range" id="blur-radius" min="1" max="30" step="0.5" value="1.5">
+                </label>
+                <label>
+                    Blur Threshold: <span id="blur-threshold-value">0.05</span><br>
+                    <input type="range" id="blur-threshold" min="0" max="2" step="0.05" value="0.05">
+                </label>
+                <label>
+                    Mix Strength: <span id="mix-strength-value">1.4</span><br>
+                    <input type="range" id="mix-strength" min="0.1" max="3" step="0.1" value="1.4">
+                </label>
+                <label>
+                    <input type="checkbox" id="dof-enabled" checked=""> Enable DOF
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script src="js/XPSystem.js"></script>
+    <script src="js/BillboardSprite.js"></script>
+    <script src="js/AttackTelegraph.js"></script>
+    <script src="js/CharacterSprite.js"></script>
+    <script src="js/Crystal.js"></script>
+    <script src="js/CollectionEffect.js"></script>
+    <script src="js/HealthOrb.js"></script>
+    <script src="js/LightningStrike.js"></script>
+    <script src="js/Fireball.js"></script>
+    <script src="js/ExplosionEffect.js"></script>
+    <script src="js/Enemy.js"></script>
+    <script src="js/HealthBar.js"></script>
+    <script src="js/DamageNumber.js"></script>
+    <script src="js/BloodParticles.js"></script>
+    <script src="js/DustParticles.js"></script>
+    <script src="js/ImpactEffect.js"></script>
+    <script src="js/CombatSystem.js"></script>
+    <script src="js/SkillUI.js"></script>
+    <script src="js/Skydome.js"></script>
+    <script src="js/GrassSystem.js"></script>
+    <script src="js/DynamicGrassSystem.js"></script>
+    <script src="js/DepthOfFieldShader.js"></script>
+    <script src="js/CatQuestCamera.js"></script>
+    <script src="js/PlayerController.js"></script>
+    <script src="js/GameWorld.js"></script>
+    <script src="js/main.js"></script>
+
+ </body></html>
